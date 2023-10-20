@@ -5,29 +5,40 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "React Space",
+    title: "User Center",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
-    getImageSrc: () => require("../images/photo1.jpg"),
+        "The enterprise's core User Center System is a full-stack project based on Spring Boot for the backend and React for the frontend. It encompasses fundamental functionalities such as user registration, login, and querying. 🔥️",
+    getImageSrc: () => require("../images/photo2.jpeg"),
+    techStack: "Frontend: React, Ant Design Pro, Umi development framework. Backend: Java, Spring + SpringMVC + SpringBoot Frameworks, MyBatis + MyBatis Plus Data Access Frameworks, MySQL Database, jUnit Unit Testing Library",
+    url:"http://user.zilinxu.com/"
   },
   {
-    title: "React Infinite Scroll",
+    title: "Health Facility Employee Status Tracking System",
+
     description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../images/photo2.jpg"),
+      "The Health Facility Employee Status Tracking System website is primarily built using PHP and MySQL, and it extensively employs various SQL functionalities.",
+    getImageSrc: () => require("../images/photo1.png"),
+    techStack: "PHP, Bootstrap, MySQL, Html, CSS",
+    url:"http://hospital.zilinxu.com/",
+  },
+
+  {
+    title: "Ristorante con Fusion",
+    description:
+      "The website for the restaurant \"Ristorante con Fusion\" is primarily constructed as a frontend project using JavaScript and Bootstrap.",
+    getImageSrc: () => require("../images/photo2.png"),
+    techStack: "JavaScript, Bootstrap, jquery, Html, CSS",
+    url:"http://restaurant.zilinxu.com/"
   },
   {
-    title: "Photo Gallery",
+    title: "Personal Portfolio",
     description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../images/photo3.jpg"),
+      "My personal website is a frontend project built using React and the Chakra UI framework, which is based on React.",
+    getImageSrc: () => require("../images/photo3.png"),
+    techStack: "React,chakra-ui, JavaScript, CSS",
+    url:"http://www.zilinxu.com/"
   },
-  {
-    title: "Event planner",
-    description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../images/photo4.jpg"),
-  },
+
 ];
 
 const ProjectsSection = () => {
@@ -56,6 +67,8 @@ const ProjectsSection = () => {
             key={project.title}
             title={project.title}
             description={project.description}
+            techStack={project.techStack}
+            url={project.url}
             imageSrc={project.getImageSrc()}
           />
         ))}
